@@ -1,0 +1,129 @@
+.monitor-screen {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: var(--space-2);
+}
+
+/* Camera viewport */
+.monitor-viewport {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+}
+
+@media (orientation: landscape) {
+  .monitor-viewport {
+    aspect-ratio: 4 / 3;
+    max-height: 60vh;
+    margin: 0 auto;
+  }
+}
+
+.monitor-viewport__placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  color: var(--color-text-muted);
+}
+
+.monitor-viewport__icon {
+  font-size: 3rem;
+  opacity: 0.5;
+}
+
+.monitor-viewport__placeholder p {
+  font-size: var(--font-size-sm);
+}
+
+.monitor-viewport__hint {
+  font-size: var(--font-size-xs) !important;
+  opacity: 0.6;
+}
+
+.monitor-viewport__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
+  object-fit: cover;
+}
+
+.monitor-viewport__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: black;
+}
+
+.monitor-viewport__status {
+  position: absolute;
+  top: var(--space-2);
+  left: var(--space-2);
+  z-index: 10;
+}
+
+.text-error {
+  color: var(--color-danger, #ff4444);
+}
+
+
+/* Risk bar */
+.monitor-risk-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+}
+
+.monitor-risk-bar__details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+/* Body regions */
+.monitor-regions__title {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--space-3);
+}
+
+.monitor-regions__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+/* Controls */
+.monitor-controls {
+  padding: var(--space-2) 0;
+}
+
+.monitor-controls__row {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: center;
+}
+
+.monitor-controls__row .action-btn {
+  flex: 1;
+}

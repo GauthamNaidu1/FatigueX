@@ -1,0 +1,113 @@
+.settings-screen {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.settings-header {
+  padding: var(--space-4) 0 var(--space-2);
+}
+
+.settings-header h1 {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+}
+
+.settings-header p {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin-top: var(--space-1);
+}
+
+.settings-section__title {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-accent-hover);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--space-2);
+}
+
+.settings-section__hint {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-3);
+}
+
+/* Threshold rows */
+.settings-thresholds {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.settings-threshold-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.settings-threshold-row:last-child {
+  border-bottom: none;
+}
+
+.settings-threshold-row__region {
+  font-size: var(--font-size-sm);
+  text-transform: capitalize;
+  color: var(--color-text-primary);
+}
+
+.settings-threshold-row__values {
+  display: flex;
+  gap: var(--space-4);
+  font-size: var(--font-size-sm);
+}
+
+.settings-threshold-row__caution {
+  color: var(--color-risk-caution);
+}
+
+.settings-threshold-row__high {
+  color: var(--color-risk-high);
+}
+
+/* Key-value list */
+.settings-kv-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.settings-kv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: var(--font-size-sm);
+}
+
+.settings-kv:last-child {
+  border-bottom: none;
+}
+
+.settings-kv span:first-child {
+  color: var(--color-text-secondary);
+}
+
+.settings-kv span:last-child {
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.settings-kv__enabled {
+  color: var(--color-risk-normal) !important;
+}
+
+.settings-kv__disabled {
+  color: var(--color-text-muted) !important;
+}
